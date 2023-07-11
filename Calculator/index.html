@@ -14,8 +14,8 @@
     <div class="container">
         <div class="calculator">
             <form>
-                <div>
-                    <input type="text" name="display" id="display" class="display">
+                <div class="display">
+                    <input type="text" name="display" id="display">
                 </div>
                 <div>
                     <input type="button" value="AC">
@@ -24,32 +24,40 @@
                     <input type="button" value="/">
                 </div>
                 <div>
-                    <input type="button" value="7">
-                    <input type="button" value="8">
-                    <input type="button" value="9">
-                    <input type="button" value="x">
+                    <input type="button" value="7" onclick="inputVal(7)">
+                    <input type="button" value="8" onclick="inputVal(8)">
+                    <input type="button" value="9" onclick="inputVal(9)">
+                    <input type="button" value="x" onclick="inputVal('x')">
                 </div>
                 <div>
-                    <input type="button" value="4">
-                    <input type="button" value="5">
-                    <input type="button" value="6">
-                    <input type="button" value="+">
+                    <input type="button" value="4" onclick="inputVal(4)">
+                    <input type="button" value="5" onclick="inputVal(5)">
+                    <input type="button" value="6" onclick="inputVal(6)">
+                    <input type="button" value="-" onclick="inputVal('-')">
                 </div>
                 <div>
-                    <input type="button" value="1">
-                    <input type="button" value="2">
-                    <input type="button" value="3">
-                    <input type="button" value="+">
+                    <input type="button" value="1" onclick="inputVal(1)">
+                    <input type="button" value="2" onclick="inputVal(2)">
+                    <input type="button" value="3" onclick="inputVal(3)">
+                    <input type="button" value="+" onclick="inputVal('+')">
                 </div>
                 <div>
-                    <input type="button" value="00">
-                    <input type="button" value="0">
-                    <input type="button" value="=">
-                    <input type="button" value="+">
+                    <input type="button" value="00" onclick="inputVal('00')">
+                    <input type="button" value="0" onclick="inputVal('0')">
+                    <input type="button" value="=" onclick="inputVal('=')">
+                    <!-- <input type="button" value="+" onclick="inputVal('00')"> -->
                 </div>
             </form>
         </div>
     </div>
+    <script>
+        function inputVal(value) {
+            document.getElementById("display").value += value;
+        }
+
+        // function 
+    </script>
+
 </body>
 
 </html>

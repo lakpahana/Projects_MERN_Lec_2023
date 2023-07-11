@@ -33,15 +33,21 @@ form input{
     cursor: pointer;
     background: transparent;
     margin: 10px;
+    color: #fff;
 }
 
 .display{
     display: flex;
     justify-content: flex-end;
     margin:20px 0;
+    box-sizing:  45px ;
+    box-shadow: none;
 }	
 
 .display input{
-    
+    text-align: right;
+    flex:1;
+    font-size: 30px;
+    background: transparent;
     
 }
