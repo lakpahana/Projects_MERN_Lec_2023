@@ -44,14 +44,13 @@
                 <div>
                     <input type="button" value="00" onclick="inputVal('00')">
                     <input type="button" value="0" onclick="inputVal('0')">
-                    <input type="button" value="=" onclick="inputVal('=')">
+                    <input type="button" value="=" onclick="calculate()">
                     <!-- <input type="button" value="+" onclick="inputVal('00')"> -->
                 </div>
             </form>
         </div>
     </div>
     <script>
-
 
 
         function inputVal(value) {
@@ -68,8 +67,19 @@
             document.getElementById("display").value = slicedValue;
         }
 
+        function calculate() {
+            let calcValue = document.getElementById("display").value;
+            //replace x with * for eval function
+            //regex to replace all occurences of x is /x/g
+            calcValue = calcValue.replace(/x/g, "*");
+            let result = eval(calcValue);
+            document.getElementById("display").value = result;
+        }
 
-        // function 
+
+
+
+
     </script>
 
 </body>
