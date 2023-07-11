@@ -18,10 +18,10 @@
                     <input type="text" name="display" id="display">
                 </div>
                 <div>
-                    <input type="button" value="AC">
-                    <input type="button" value="DE">
-                    <input type="button" value=".">
-                    <input type="button" value="/">
+                    <input type="button" value="AC" onclick="clearDisplay()">
+                    <input type="button" value="DE" onclick="clearLastElem()">
+                    <input type="button" value="." onclick="inputVal('.')">
+                    <input type="button" value="/" onclick="inputVal('/')">
                 </div>
                 <div>
                     <input type="button" value="7" onclick="inputVal(7)">
@@ -51,9 +51,23 @@
         </div>
     </div>
     <script>
+
+
+
         function inputVal(value) {
             document.getElementById("display").value += value;
         }
+
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+        }
+
+        function clearLastElem() {
+            let calcValue = document.getElementById("display").value;
+            let slicedValue = calcValue.slice(0, -1);
+            document.getElementById("display").value = slicedValue;
+        }
+
 
         // function 
     </script>
