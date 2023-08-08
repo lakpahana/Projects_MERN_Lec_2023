@@ -5,9 +5,13 @@ import WeatherService from './components/WeatherService';
 function App() {
   return (
     <div className="App">
-      <Route path='/' element={
-        <WeatherService/>
-      }></Route>
+      <Router>
+        <Routes>
+          <Route path='/' element={
+            <WeatherService/>
+          }></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
