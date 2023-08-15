@@ -112,7 +112,12 @@ export default function WeatherService() {
     }, [searchbox]);
 
     const handleSearch = (e) => {
-        setSearchbox(e.target.value);
+        //set timeout to prevent api request on every key press
+
+        setTimeout(() => {
+            setSearchbox(e.target.value);
+        }, 1000);
+
     }
 
 
