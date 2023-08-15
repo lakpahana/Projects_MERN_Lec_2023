@@ -30,7 +30,7 @@ export default function WeatherService() {
                 type="search"
                 variant="filled"
             />
-            <TableContainer component={Paper}>
+            <TableContainer component={Paper} className='tableData'>
 
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
