@@ -89,6 +89,7 @@ export default function WeatherService() {
         }
         const LOCATION_INPUT = location;
         const API_URL_OLD = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${LOCATION_INPUT}&aqi=no`;
+        
         const API_URL = `http://localhost:3005/?address=${LOCATION_INPUT}`
         await axios.get(API_URL)
 
