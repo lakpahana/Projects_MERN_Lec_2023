@@ -9,6 +9,10 @@ const port = 3005;
 const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
+    res.setHeader('Access-Control-Max-Age', 2592000); // 30 days
+
     const parseUrl = url.parse(req.url);
     const parsedQuery = queryString.parse(parseUrl.query);
     console.log(parsedQuery);

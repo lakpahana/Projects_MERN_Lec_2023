@@ -88,9 +88,10 @@ export default function WeatherService() {
             location = 'london';
         }
         const LOCATION_INPUT = location;
+        const API_URL_OLD = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${LOCATION_INPUT}&aqi=no`;
+        const API_URL = `http://localhost:3005/?address=${LOCATION_INPUT}`
+        await axios.get(API_URL)
 
-        await axios.get(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${LOCATION_INPUT}&aqi=no`)
-        
             .then((response) => {
                 console.log(response.data);
                 setWeatherData(response.data);
@@ -99,7 +100,7 @@ export default function WeatherService() {
             .catch((error) => {
                 console.log(error);
             }
-        )
+            )
     }
 
     useEffect(() => {
