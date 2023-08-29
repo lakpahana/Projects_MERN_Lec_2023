@@ -8,7 +8,7 @@ const weatherApp = (address) => {
             url: `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${address}&aqi=no`,
             json: true
         }
-        console.log(info, 'info')
+        // console.log(info, 'info')
         request(info, (error, response) => {
             if (error) {
                 reject(error);
