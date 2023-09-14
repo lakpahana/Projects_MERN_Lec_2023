@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
 
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
-    res.setHeader('Access-Control-Max-Age', 2592000); // 30 days
+    res.setHeader('Access-Control-Max-Age', 2592000); 
 
     const parseUrl = url.parse(req.url);
     const parsedQuery = queryString.parse(parseUrl.query);
